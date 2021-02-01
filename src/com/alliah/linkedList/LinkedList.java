@@ -137,7 +137,7 @@ public class LinkedList {
 
     }
 
-    public int getKthFromTheEnd0(int k){
+    public int getKthFromTheEndOld(int k){
         if(k <=0 || k > size)
             throw new IllegalArgumentException();
 
