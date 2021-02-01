@@ -1,21 +1,34 @@
 package com.alliah;
 
 import com.alliah.arrays.Array;
+import com.alliah.linkedList.LinkedList;
 
 import java.util.Arrays;
+import java.util.Collections;
 
 public class Main {
 
     public static void main(String[] args) {
-	Array numbers = new Array(3);
-	numbers.insert(10);
-	numbers.insert(20);
-	numbers.insert(30);
-	numbers.insert(40);
-	numbers.insertAt(50,4);
+		var list = new LinkedList();
+		list.addFirst(10);
+		list.addLast(20);
+		list.addLast(30);
+		list.addLast(40);
+		list.addLast(50);
+		list.addLast(60);
+		list.addFirst(0);
+		list.addLast(70);
 
-	int[] compare = {10,50,60,40};
-	numbers.print();
+		var array = list.toArray();
+		System.out.println(Arrays.toString(array));
+		System.out.println(list.getKthFromTheEnd(5));
+
+
+
+
+
+
+
 
     }
 }
