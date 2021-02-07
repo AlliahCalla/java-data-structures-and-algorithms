@@ -11,6 +11,7 @@ public class Stack {
             throw new StackOverflowError();
 
         items[count++] = item;
+        System.out.println(count);
     }
 
     public int pop(){
