@@ -1,20 +1,31 @@
 package com.alliah;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class Main {
     public static void main(String[] args) {
-        PriorityQueue queue = new PriorityQueue();
-        queue.add(3);
-        queue.add(5);
-        queue.add(1);
-        queue.add(6);
+        String str = "a green apple";
+        Map<Character, Integer> map = new HashMap<>();
 
-        System.out.println(queue.isFull());
-        System.out.println(queue.isEmpty());
-        System.out.println(queue);
+        var chars = str.toCharArray();
+        for(char ch: chars){
+            if(map.containsKey(ch)){
+                int count = map.get(ch);
+                map.put(ch, count+1);
+            }else
+                map.put(ch, 1);
+        }
+        System.out.println(map);
+
+        for(var ch: chars)
+            if(map.get(ch) == 1){
+                System.out.println(ch);
+                break;
+            }
 
 
-
-
+        System.out.println(Character.MIN_VALUE);
 
 
     }
