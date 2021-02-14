@@ -31,6 +31,7 @@ public class PriorityQueue {
     public int remove(){
         if(isEmpty())
             throw new IllegalStateException();
+
         int item = items[--count];
         items[count] = 0;
 
