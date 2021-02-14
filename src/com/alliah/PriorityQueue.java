@@ -7,22 +7,44 @@ public class PriorityQueue {
     private int count;
 
     public void add(int item){
+        if(isFull())
+            throw new IllegalStateException();
+
+        var i = shiftItemsToInsert(item);
+        items[i] = item;
+        count++;
+
+    }
+
+    private int shiftItemsToInsert(int item){
         int i;
-        for(i = count - 1; i>=0; i--){
+        for(i = count - 1; i >=0; i-- ){
             if(items[i] > item)
                 items[i + 1] = items[i];
             else
                 break;
-
         }
-        items[i + 1] = item;
-        count++;
 
+        return i + 1;
+    }
 
+    public int remove(){
+        if(isEmpty())
+            throw new IllegalStateException();
+        int item = items[--count];
+        items[count] = 0;
+
+        return item;
 
     }
 
+    public boolean isFull(){
+        return count == items.length;
+    }
 
+    public boolean isEmpty(){
+        return count == 0;
+    }
 
     @Override
     public String toString() {
