@@ -7,7 +7,7 @@ public class Main {
         queue.add(5);
         queue.add(1);
         queue.add(6);
-        queue.add(2);
+
         System.out.println(queue.isFull());
         System.out.println(queue.isEmpty());
         System.out.println(queue);

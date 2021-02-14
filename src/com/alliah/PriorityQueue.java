@@ -36,7 +36,6 @@ public class PriorityQueue {
         items[count] = 0;
 
         return item;
-
     }
 
     public boolean isFull(){
