@@ -1,14 +1,19 @@
 package com.alliah;
 
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.Map;
+import java.util.Set;
 
 public class Main {
     public static void main(String[] args) {
-        String str = "a green apple";
-        CharFinder charFinder = new CharFinder();
-        var character = charFinder.findFirstNonRepeatingChar(str);
-        System.out.println(character);
+        Set<Integer> set = new HashSet<>();
+        int[] integers = {1, 2, 3, 3, 2, 1, 4};
+        for(int number: integers)
+            set.add(number);
+
+        System.out.println(set);
+
 
 
     }
